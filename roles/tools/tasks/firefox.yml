@@ -1,0 +1,8 @@
+---
+- name: Install browser
+  become: true
+  pacman:
+    name: 
+      - firefox
+    state: present
+

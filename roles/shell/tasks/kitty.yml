@@ -1,0 +1,16 @@
+---
+- name: Install kitty
+  become: true
+  community.general.pacman:
+    name: kitty
+    state: present
+
+- name: Copy kitty configuration file
+  become: true
+  ansible.builtin.copy:
+    src: ../../../configs/kitty.conf
+    dest: "{{ '/home/' + user + '/.config/kitty/kitty.conf' if user != 'root' else '/root/.config/kitty/kitty.conf' }}"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: '0644'
+

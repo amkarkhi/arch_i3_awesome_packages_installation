@@ -1,9 +1,9 @@
 ---
 - name: Install ZSH
   become: true
-  ansible.builtin.apt:
-    pkg:
-      - zsh
+  community.general.pacman:
+    name: zsh
+    state: preset
   notify:
     - Set ZSH as default shell
 

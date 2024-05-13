@@ -1,0 +1,36 @@
+---
+- name: Setup i3 on Arch Linux
+  become: yes
+  tasks:
+    - name: Install necessary packages
+      pacman:
+        name:
+          - i3-gaps
+          - rofi
+          - volumeicon
+          - pulseaudio
+          - pavucontrol
+          - pcmanfm
+          - moc
+          - picom
+          - dunst
+          - scrot
+          - xorg-xkill
+          - nitrogen
+          - networkmanager
+          - xfce4-power-manager
+          - clipit
+          - conky
+          - xautolock
+          - polkit-gnome
+          - feh
+          - ranger
+        state: present
+
+    - name: Copy Config Files
+      copy:
+        src: ../../../configs/i3.conf
+        dest: ~/.config/i3/config
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: '0644'

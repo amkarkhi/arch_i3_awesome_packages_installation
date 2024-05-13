@@ -1,0 +1,23 @@
+- name: Copy shell files
+  copy:
+    src: ../../../configs/dns.sh
+    dest: /.tools/dns.sh
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+
+- name: Copy shell files
+  copy:
+    src: ../../../configs/.tools.sh
+    dest: /.tools/.tools.sh
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+
+
+- name: Source shell files in bashrc
+  lineinfile:
+    path: "/home/{{ ansible_user }}/.zshrc"
+    line: "source /.tools/.tools.sh"
+    state: present
+

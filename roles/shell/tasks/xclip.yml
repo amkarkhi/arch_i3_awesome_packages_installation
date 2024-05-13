@@ -1,12 +1,13 @@
 ---
 - name: Install xclip
-  apt:
+  become: true
+  community.general.pacman:
     name: xclip
     state: present
-  become: true
-  
+
 - name: Add 'clipboard' alias to zsh config
   ansible.builtin.lineinfile:
     path: "{{ '/home/' + user + '/.zshrc' if user != 'root' else '/root/.zshrc' }}"
     line: alias clipboard='xclip -sel clip'
     insertafter: EOF
+

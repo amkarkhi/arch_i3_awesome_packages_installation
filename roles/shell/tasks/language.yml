@@ -1,0 +1,12 @@
+---
+- name: Install Node.js
+  pacman:
+    name: nodejs
+
+- name: Install Go
+  pacman:
+    name: go
+
+- name: Install Lua
+  pacman:
+    name: lua

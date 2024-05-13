@@ -1,15 +1,8 @@
 ---
-# tasks file for tools
-- include_tasks: snap-package-manager.yaml
-  tags:
-    - devops
 - include_tasks: telegram.yml
   tags: 
     - desktop
 - include_tasks: monitoring-packages.yml
-  tags:
-    - devops
-- include_tasks: tweak.yml
   tags:
     - devops
 - include_tasks: v2ray-plugin.yml
@@ -27,9 +20,16 @@
 - include_tasks: open-ssh.yml
   tags:
     - devops
-- include_tasks: gnome-extensions.yml
-  tags:
-    - devops
 - include_tasks: vlc.yml
   tags:
     - desktop
+- include_task: warp.yml
+  tags:
+    - shell
+- include_task: persepolis.yml
+  tags:
+    - shell
+- include_task: firefox.yml
+  tags:
+    - shell
+

@@ -1,6 +1,6 @@
 ---
 - name: Install OpenSSH
-  apt:
+  pacman:
     name: openssh-server
     state: present
   become: true

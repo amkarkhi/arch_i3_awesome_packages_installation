@@ -1,6 +1,6 @@
 ---
-- name: Install VLC
+- name: Install persepolis
   pacman:
-    name: vlc
+    name: persepolis
     state: present
   become: true

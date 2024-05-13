@@ -1,6 +1,6 @@
 ---
 - name: Install terminator
-  apt:
+  become: true
+  pacman:
     name: terminator
     state: present
-  become: true

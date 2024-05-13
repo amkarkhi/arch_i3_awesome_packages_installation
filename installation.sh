@@ -98,8 +98,7 @@ fi
 # Check if Ansible is installed and install it if not
 if ! command -v ansible &> /dev/null; then
     echo "Ansible is not installed. Installing Ansible..."
-    sudo apt update
-    sudo apt install ansible -y
+    sudo pacman -Sy ansible
 fi
 
 # Set the repository URL

@@ -10,21 +10,13 @@
       ZSH={{ '/home/' + user + '/.oh-my-zsh' if user != 'root' else '/root/.oh-my-zsh' }} sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   when: not ohmyzsh_check.stat.exists
 
-- name: Fetch .zshrc from remote machine
-  fetch:
-    src: /root/.zshrc
-    dest: /tmp/.zshrc_remote
-    flat: yes
-
-- name: Copy .zshrc file
+- name: Copy .zshrc configuration file
   copy:
-    src: /tmp/.zshrc_remote
-    dest: "/home/{{ user }}/.zshrc"
-    owner: root
-    group: root
-    mode: "0644"
-  when: user != 'root'
-  notify: Set ZSH as default shell
+    src: ../../../configs/.zshrc
+    dest: "{{ '/home/' + user + '/.zshrc' if user != 'root' else '/root/.zshrc' }}"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: '0644'
 
 - name: Set ZSH theme
   ansible.builtin.lineinfile:

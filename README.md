@@ -1,4 +1,4 @@
-# Ubuntu Awesome Packages 🎉
+# Arch Awesome Packages 🎉
 
 <p align=center>
 <img src="assets/ubuntu-awesome.PNG" alt="Ubuntu Awesome Packages" width="500" height="500">

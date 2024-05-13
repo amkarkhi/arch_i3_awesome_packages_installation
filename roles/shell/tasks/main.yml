@@ -35,6 +35,18 @@
 - include_tasks: zsh-autosuggestion.yml
   tags:
     - shell
+- include_tasks: kitty.yml
+  tags:
+    - shell
 - include_tasks: terminator.yml
   tags:
     - shell
+- include_tasks: i3.yml
+  tags:
+    - shell 
+- include_tasks: language.yml
+  tags:
+    - shell 
+- include_tasks: alias.yml
+  tags:
+    - shell 
