@@ -8,7 +8,7 @@
 - name: Copy kitty configuration file
   become: true
   ansible.builtin.copy:
-    src: ../../../configs/kitty.conf
+    src: "{{ kitty_config_dir }}"
     dest: "{{ '/home/' + user + '/.config/kitty/kitty.conf' if user != 'root' else '/root/.config/kitty/kitty.conf' }}"
     owner: "{{ user }}"
     group: "{{ user }}"

@@ -26,6 +26,4 @@ required_packages:
   - cmake
   - libxcb
   - xorg-xkbcomp
-```
-
   - python-setuptools

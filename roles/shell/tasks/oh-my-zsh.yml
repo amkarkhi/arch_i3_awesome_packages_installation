@@ -12,7 +12,7 @@
 
 - name: Copy .zshrc configuration file
   copy:
-    src: ../../../configs/.zshrc
+    src: "{{ zshrc_config_dir }}"
     dest: "{{ '/home/' + user + '/.zshrc' if user != 'root' else '/root/.zshrc' }}"
     owner: "{{ user }}"
     group: "{{ user }}"

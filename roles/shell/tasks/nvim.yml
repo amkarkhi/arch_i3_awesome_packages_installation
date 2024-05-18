@@ -8,7 +8,7 @@
 - name: Clone Neovim configuration
   become: false
   git:
-    repo: https://github.com/amkarkhi/kickstart-nvim.git
+    repo: "{{ neovim_config_repo }}"
     dest: "{{ '/home/' + user + '/.config/nvim' if user != 'root' else '/root/.config/nvim' }}"
     clone: yes
     update: yes

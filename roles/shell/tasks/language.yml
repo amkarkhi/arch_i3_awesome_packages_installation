@@ -1,12 +1,6 @@
 ---
-- name: Install Node.js
+- name: Install languages
   pacman:
-    name: nodejs
+    name: "{{ item }}"
+  loop: "{{ languages }}"
 
-- name: Install Go
-  pacman:
-    name: go
-
-- name: Install Lua
-  pacman:
-    name: lua

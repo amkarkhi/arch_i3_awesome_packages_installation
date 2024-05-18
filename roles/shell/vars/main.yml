@@ -3,4 +3,33 @@ zsh_plugins:
   - git
   - docker
 zsh_theme: "xiong-chiamiov-plus"
+i3_config_dir: "../../../configs/i3.conf"
+i3_required_packages:
+  - i3-gaps
+  - rofi
+  - volumeicon
+  - pulseaudio
+  - pavucontrol
+  - pcmanfm
+  - moc
+  - picom
+  - dunst
+  - scrot
+  - xorg-xkill
+  - nitrogen
+  - networkmanager
+  - xfce4-power-manager
+  - clipit
+  - conky
+  - xautolock
+  - polkit-gnome
+  - feh
+  - ranger
+kitty_config_dir: "../../../configs/kitty.conf"
+languages:
+  - go
+  - lua
+  - nodejs
+nvim_config_repo: "https://github.com/amkarkhi/kickstart-nvim.git"
+zshrc_config_dir: "../../../configs/.zshrc" 
 
