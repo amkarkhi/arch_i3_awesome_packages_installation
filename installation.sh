@@ -14,7 +14,7 @@ selected_tags=""
 
 # Function to display script usage
 display_usage() {
-    echo "Usage: $0 <--local|--remote> [--remove-repo] [--set-dns <DNS_IP>] [--show-repo-location] [--inventory <INVENTORY_PATH>] [--ssh-key <SSH_KEY_FILE>]"
+    echo "Usage: $0 < --local| --remote > [--remove-repo] [--set-dns <DNS_IP>] [--show-repo-location] [--inventory <INVENTORY_PATH>] [--ssh-key <SSH_KEY_FILE>]"
     echo "Options:"
     echo "  --local                : Run the playbook on the local machine"
     echo "  --remote               : Run the playbook on a remote machine"
@@ -102,7 +102,7 @@ if ! command -v ansible &> /dev/null; then
 fi
 
 # Set the repository URL
-repo_url="https://github.com/data-burst/ubuntu_awesome_packages_installation.git"
+repo_url="https://github.com/amkarkhi/arch_i3_awesome_packages_installation.git"
 
 # Clone the Ansible repository from GitHub
 repo_name=$(basename "$repo_url" .git)
