@@ -23,9 +23,9 @@
 - include_tasks: vlc.yml
   tags:
     - desktop
-- include_task: warp.yml
-  tags:
-    - shell
+# - include_task: warp.yml
+#   tags:
+#     - shell
 - include_task: persepolis.yml
   tags:
     - shell

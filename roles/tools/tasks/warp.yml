@@ -16,3 +16,12 @@
     line: alias warp='/.tools/warp-plus/warp'
     insertafter: EOF
 
+
+shell,
+ansible.legacy.shell,
+add_host,
+include,
+ansible.legacy.import_tasks,
+ansible.legacy.include,
+ansible.legacy.win_command,
+ansible.legacy.add_host, ansible.builtin.meta, ansible.legacy.include_vars, ansible.builtin.win_shell, ansible.builtin.include_vars, ansible.builtin.raw, ansible.legacy.raw, ansible.builtin.command, ansible.builtin.import_role, group_by, ansible.builtin.set_fact, script, ansible.legacy.meta, import_tasks, ansible.builtin.win_command, ansible.builtin.add_host, win_shell, ansible.windows.win_shell, set_fact, ansible.builtin.include_role, include_tasks, raw, ansible.legacy.include_tasks, ansible.legacy.import_role, include_role, ansible.builtin.import_tasks, ansible.builtin.shell, ansible.legacy.group_by, win_command, ansible.windows.win_command, meta, ansible.legacy.command, ansible.builtin.group_by, ansible.legacy.win_shell, ansible.builtin.script, ansible.legacy.set_fact, ansible.builtin.include, command, import_role, ansible.legacy.script, ansible.legacy.include_role, include_vars
