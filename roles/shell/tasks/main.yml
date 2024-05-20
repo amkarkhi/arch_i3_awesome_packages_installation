@@ -26,9 +26,6 @@
 - include_tasks: nvim.yml
   tags:
     - shell
-- include_tasks: vim.yml
-  tags:
-    - shell
 - include_tasks: xclip.yml
   tags:
     - shell

@@ -1,17 +1,15 @@
 ---
-- name: Setup i3 on Arch Linux
-  become: yes
-  tasks:
-    - name: Install necessary packages
-      pacman:
-        name: "{{ item }}"
-        state: present
-      loop: "{{ i3_required_packages }}"
+- name: Install necessary packages
+  become: true
+  pacman:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ i3_required_packages }}"
 
-    - name: Copy Config Files
-      copy:
-        src: "{{i3_config_dir}}/i3/config"
-        dest: "/home/{{user}}/.config/i3/config"
-        owner: "{{ user }}"
-        group: "{{ user }}"
-        mode: '0644'
+- name: Copy Config Files
+  copy:
+    src: "{{i3_config_dir}}/i3/config"
+    dest: "/home/{{user}}/.config/i3/config"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: '0644'

@@ -1,10 +1,8 @@
 ---
-- hosts: all
-  become: true
-  tasks:
-    - name: Install Alacritty
-      community.general.pacman:
-        name: alacritty
-        state: present
+  - name: Install Alacritty
+    become: true
+    community.general.pacman:
+      name: alacritty
+      state: present
 
 
